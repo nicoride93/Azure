@@ -1,0 +1,162 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "nestedTemplatesLocation": {
+            "value": "https://raw.githubusercontent.com/Azure/RDS-Templates/master/ARM-wvd-templates/nestedtemplates/"
+        },
+        "artifactsLocation": {
+            "value": "https://raw.githubusercontent.com/Azure/RDS-Templates/master/ARM-wvd-templates/DSC/"
+        },
+        "nestedTemplatesLocationSASToken": {
+            "value": "testSaSToken"
+        },
+        "artifactsLocationSASToken": {
+            "value": ""
+        },
+        "hostpoolName": {
+            "value": "ArmTest"
+        },
+        "hostpoolToken": {
+            "value": "replace"
+        },
+        "hostpoolResourceGroup": {
+            "value": "wvd-rg"
+        },
+        "hostpoolLocation": {
+            "value": "westus2"
+        },
+        "hostpoolProperties": {
+            "value": {}
+        },
+        "vmTemplate": {
+            "value": ""
+        },
+        "administratorAccountUsername": {
+            "value": "gandalf@riderelli.com"
+        },
+        "administratorAccountPassword": {
+            "value": "123"
+        },
+        "vmAdministratorAccountUsername": {
+            "value": "Nico"
+        },
+        "vmAdministratorAccountPassword": {
+            "value": "Aspiresimulation!"
+        },
+        "availabilityOption": {
+            "value": "None"
+        },
+        "availabilitySetName": {
+            "value": ""
+        },
+        "createAvailabilitySet": {
+            "value": false
+        },
+        "availabilitySetUpdateDomainCount": {
+            "value": 5
+        },
+        "availabilitySetFaultDomainCount": {
+            "value": 2
+        },
+        "availabilityZone": {
+            "value": 1
+        },
+        "vmResourceGroup": {
+            "value": "wvd-rg" 
+        },
+        "vmLocation": {
+            "value": "westus2" 
+        },
+        "vmSize": {
+            "value": "Standard_D2s_v3"
+        },
+        "vmInitialNumber": {
+            "value": 0 
+        },
+        "vmNumberOfInstances": {
+            "value": 2 
+        },
+        "vmNamePrefix": {
+            "value": "added" 
+        },
+        "vmImageType": {
+            "value": "Gallery"
+        },
+        "vmGalleryImageOffer": {
+            "value": "office-365"
+        },
+        "vmGalleryImagePublisher": {
+            "value": "MicrosoftWindowsDesktop"
+        },
+        "vmGalleryImageSKU": {
+            "value": "20h2-evd-o365pp"
+        },
+        "vmImageVhdUri": {
+            "value": ""
+        },
+        "vmCustomImageSourceId": {
+            "value": "/subscriptions/2d65d699-dbb2-4659-bd40-ca53f2e38619/resourceGroups/wvd-rg/providers/Microsoft.Compute/galleries/sigtest/images/test"
+        },
+        "vmDiskType": {
+            "value": "StandardSSD_LRS" 
+        },
+        "vmUseManagedDisks": {
+            "value": true
+        },
+        "storageAccountResourceGroupName": {
+            "value": ""
+        },
+        "existingVnetName": {
+            "value": "wvd-vnet" 
+        },
+        "existingSubnetName": {
+            "value": "WVD"
+        },
+        "virtualNetworkResourceGroupName": {
+            "value": "wvd-rg" 
+        },
+        "createNetworkSecurityGroup": {
+            "value": false
+        },
+        "networkSecurityGroupId": {
+            "value": ""
+        },
+        "networkSecurityGroupRules": {
+            "value": []
+        },
+        "availabilitySetTags": {
+            "value": {}
+        },
+        "networkInterfaceTags": {
+            "value": {}
+        },
+        "networkSecurityGroupTags": {
+            "value": {}
+        },
+        "virtualMachineTags": {
+            "value": {}
+        },
+        "imageTags": {
+            "value": {}
+        },
+        "deploymentId": {
+            "value": ""
+        },
+        "apiVersion": {
+            "value": "2019-12-10-preview"
+        },
+        "ouPath": {
+            "value": ""
+        },
+        "domain": {
+            "value": ""
+        },
+        "aadJoin": {
+            "value": false
+        },
+        "intune": {
+            "value": false
+        }
+    }
+}

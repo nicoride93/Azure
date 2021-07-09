@@ -1,0 +1,424 @@
+{
+    "source": 2,
+    "revision": 3,
+    "description": null,
+    "createdBy": {
+        "displayName": "Nicolas Riderelli",
+        "url": "https://spsprodsbr1.vssps.visualstudio.com/A6a3b891c-0d29-4f9b-b722-25ffe4f0a8f7/_apis/Identities/e400facd-2f20-62f1-a4c7-357fac17a5ee",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/nicolas0771/_apis/GraphProfile/MemberAvatars/aad.ZTQwMGZhY2QtMmYyMC03MmYxLWE0YzctMzU3ZmFjMTdhNWVl"
+            }
+        },
+        "id": "e400facd-2f20-62f1-a4c7-357fac17a5ee",
+        "uniqueName": "nicolas@riderelli.com",
+        "imageUrl": "https://dev.azure.com/nicolas0771/_apis/GraphProfile/MemberAvatars/aad.ZTQwMGZhY2QtMmYyMC03MmYxLWE0YzctMzU3ZmFjMTdhNWVl",
+        "descriptor": "aad.ZTQwMGZhY2QtMmYyMC03MmYxLWE0YzctMzU3ZmFjMTdhNWVl"
+    },
+    "createdOn": "2021-07-07T18:34:52.113Z",
+    "modifiedBy": {
+        "displayName": "Nicolas Riderelli",
+        "url": "https://spsprodsbr1.vssps.visualstudio.com/A6a3b891c-0d29-4f9b-b722-25ffe4f0a8f7/_apis/Identities/e400facd-2f20-62f1-a4c7-357fac17a5ee",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/nicolas0771/_apis/GraphProfile/MemberAvatars/aad.ZTQwMGZhY2QtMmYyMC03MmYxLWE0YzctMzU3ZmFjMTdhNWVl"
+            }
+        },
+        "id": "e400facd-2f20-62f1-a4c7-357fac17a5ee",
+        "uniqueName": "nicolas@riderelli.com",
+        "imageUrl": "https://dev.azure.com/nicolas0771/_apis/GraphProfile/MemberAvatars/aad.ZTQwMGZhY2QtMmYyMC03MmYxLWE0YzctMzU3ZmFjMTdhNWVl",
+        "descriptor": "aad.ZTQwMGZhY2QtMmYyMC03MmYxLWE0YzctMzU3ZmFjMTdhNWVl"
+    },
+    "modifiedOn": "2021-07-08T14:09:11.457Z",
+    "isDeleted": false,
+    "lastRelease": {
+        "id": 19,
+        "name": "Release-4",
+        "artifacts": [],
+        "_links": {},
+        "description": "",
+        "releaseDefinition": {
+            "id": 3,
+            "projectReference": null,
+            "_links": {}
+        },
+        "createdOn": "2021-07-09T17:08:52.557Z",
+        "createdBy": {
+            "displayName": "Nicolas Riderelli",
+            "url": "https://spsprodsbr1.vssps.visualstudio.com/A6a3b891c-0d29-4f9b-b722-25ffe4f0a8f7/_apis/Identities/e400facd-2f20-62f1-a4c7-357fac17a5ee",
+            "_links": {
+                "avatar": {
+                    "href": "https://dev.azure.com/nicolas0771/_apis/GraphProfile/MemberAvatars/aad.ZTQwMGZhY2QtMmYyMC03MmYxLWE0YzctMzU3ZmFjMTdhNWVl"
+                }
+            },
+            "id": "e400facd-2f20-62f1-a4c7-357fac17a5ee",
+            "uniqueName": "nicolas@riderelli.com",
+            "imageUrl": "https://dev.azure.com/nicolas0771/_apis/GraphProfile/MemberAvatars/aad.ZTQwMGZhY2QtMmYyMC03MmYxLWE0YzctMzU3ZmFjMTdhNWVl",
+            "descriptor": "aad.ZTQwMGZhY2QtMmYyMC03MmYxLWE0YzctMzU3ZmFjMTdhNWVl"
+        }
+    },
+    "variables": {
+        "deploymentId": {
+            "value": "",
+            "allowOverride": true
+        },
+        "domain": {
+            "value": "",
+            "allowOverride": true
+        },
+        "hostpoolName": {
+            "value": "",
+            "allowOverride": true
+        },
+        "hostpoolResourceGroup": {
+            "value": "",
+            "allowOverride": true
+        },
+        "hostpoolToken": {
+            "value": "",
+            "allowOverride": true
+        },
+        "location": {
+            "value": "",
+            "allowOverride": true
+        },
+        "oupath": {
+            "value": "",
+            "allowOverride": true
+        },
+        "vmCustomImageSourceId": {
+            "value": "",
+            "allowOverride": true
+        },
+        "vmInitialNumber": {
+            "value": "",
+            "allowOverride": true
+        },
+        "vmNamePrefix": {
+            "value": "",
+            "allowOverride": true
+        },
+        "vmNumberOfInstances": {
+            "value": "",
+            "allowOverride": true
+        },
+        "vmResourceGroup": {
+            "value": "",
+            "allowOverride": true
+        }
+    },
+    "variableGroups": [],
+    "environments": [
+        {
+            "id": 3,
+            "name": "Stage 1",
+            "rank": 1,
+            "owner": {
+                "displayName": "Nicolas Riderelli",
+                "url": "https://spsprodsbr1.vssps.visualstudio.com/A6a3b891c-0d29-4f9b-b722-25ffe4f0a8f7/_apis/Identities/e400facd-2f20-62f1-a4c7-357fac17a5ee",
+                "_links": {
+                    "avatar": {
+                        "href": "https://dev.azure.com/nicolas0771/_apis/GraphProfile/MemberAvatars/aad.ZTQwMGZhY2QtMmYyMC03MmYxLWE0YzctMzU3ZmFjMTdhNWVl"
+                    }
+                },
+                "id": "e400facd-2f20-62f1-a4c7-357fac17a5ee",
+                "uniqueName": "nicolas@riderelli.com",
+                "imageUrl": "https://dev.azure.com/nicolas0771/_apis/GraphProfile/MemberAvatars/aad.ZTQwMGZhY2QtMmYyMC03MmYxLWE0YzctMzU3ZmFjMTdhNWVl",
+                "descriptor": "aad.ZTQwMGZhY2QtMmYyMC03MmYxLWE0YzctMzU3ZmFjMTdhNWVl"
+            },
+            "variables": {},
+            "variableGroups": [],
+            "preDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "id": 7
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": false,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": 1
+                }
+            },
+            "deployStep": {
+                "id": 8
+            },
+            "postDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "id": 9
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": false,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": 2
+                }
+            },
+            "deployPhases": [
+                {
+                    "deploymentInput": {
+                        "parallelExecution": {
+                            "parallelExecutionType": 0
+                        },
+                        "agentSpecification": {
+                            "identifier": "vs2017-win2016"
+                        },
+                        "skipArtifactsDownload": false,
+                        "artifactsDownloadInput": {
+                            "downloadInputs": []
+                        },
+                        "queueId": 18,
+                        "demands": [],
+                        "enableAccessToken": false,
+                        "timeoutInMinutes": 0,
+                        "jobCancelTimeoutInMinutes": 1,
+                        "condition": "succeeded()",
+                        "overrideInputs": {}
+                    },
+                    "rank": 1,
+                    "phaseType": 1,
+                    "name": "Agent job",
+                    "refName": null,
+                    "workflowTasks": [
+                        {
+                            "environment": {},
+                            "taskId": "1e244d32-2dd4-4165-96fb-b7441ca9331e",
+                            "version": "2.*",
+                            "name": "Azure Key Vault: local admin password",
+                            "refName": "joinDomainPassword",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "ConnectedServiceName": "7b95bb5d-d6df-43b6-9e36-ad9f0efc34cf",
+                                "KeyVaultName": "wvdAdvanceKickstarter",
+                                "SecretsFilter": "joinDomainPassword",
+                                "RunAsPreJob": "true"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "eb72cb01-a7e5-427b-a8a1-1b31ccac8a43",
+                            "version": "3.*",
+                            "name": "AzureBlob File Copy",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "SourcePath": "$(System.DefaultWorkingDirectory)/_WVD Deployment/Modules/nestedtemplates/managedDisks-galleryvm.json",
+                                "ConnectedServiceNameARM": "7b95bb5d-d6df-43b6-9e36-ad9f0efc34cf",
+                                "Destination": "AzureBlob",
+                                "StorageAccountRM": "nrrdstorage",
+                                "ContainerName": "nestedtemplates",
+                                "BlobPrefix": "",
+                                "EnvironmentNameRM": "",
+                                "ResourceFilteringMethod": "machineNames",
+                                "MachineNames": "",
+                                "vmsAdminUserName": "",
+                                "vmsAdminPassword": "",
+                                "TargetPath": "",
+                                "AdditionalArgumentsForBlobCopy": "",
+                                "AdditionalArgumentsForVMCopy": "",
+                                "enableCopyPrerequisites": "false",
+                                "CopyFilesInParallel": "true",
+                                "CleanTargetBeforeCopy": "false",
+                                "skipCACheck": "true",
+                                "outputStorageUri": "_ContainerURI",
+                                "outputStorageContainerSasToken": "_ContainerSAS",
+                                "sasTokenTimeOutInMinutes": "240"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "94a74903-f93f-4075-884f-dc11f34058b4",
+                            "version": "3.*",
+                            "name": "ARM Template deployment: Resource Group scope",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "deploymentScope": "Resource Group",
+                                "ConnectedServiceName": "7b95bb5d-d6df-43b6-9e36-ad9f0efc34cf",
+                                "subscriptionName": "2d65d699-dbb2-4659-bd40-ca53f2e38619",
+                                "action": "Create Or Update Resource Group",
+                                "resourceGroupName": "$(hostpoolResourceGroup)",
+                                "location": "$(location)",
+                                "templateLocation": "Linked artifact",
+                                "csmFileLink": "",
+                                "csmParametersFileLink": "",
+                                "csmFile": "$(System.DefaultWorkingDirectory)/_WVD Deployment/Modules/addSessionHosts/addSessionHosts.json",
+                                "csmParametersFile": "$(System.DefaultWorkingDirectory)/_WVD Deployment/Modules/addSessionHosts/parameters/addSessionHost.parameters.json",
+                                "overrideParameters": "-hostpoolToken $(hostpoolToken) -vmInitialNumber $(vmInitialNumber) -vmNumberOfInstances $(vmNumberOfInstances) -vmNamePrefix $(vmNamePrefix) -nestedTemplatesLocation $(_ContainerURI) -nestedTemplatesLocationSASToken $(_ContainerSAS) -hostpoolLocation $(location) -vmResourceGroup $(vmResourceGroup) -vmCustomImageSourceId \"$(vmCustomImageSourceId)\" -domain \"$(domain)\" -ouPath \"$(oupath)\" -deploymentId $(deploymentId) -hostpoolResourceGroup $(hostpoolResourceGroup) -hostpoolName $(hostpoolName) -administratorAccountPassword $(joinDomainPassword) -vmAdministratorAccountPassword $(joinDomainPassword)",
+                                "deploymentMode": "Incremental",
+                                "deploymentName": "",
+                                "deploymentOutputs": "",
+                                "addSpnToEnvironment": "false"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "environmentOptions": {
+                "emailNotificationType": "OnlyOnFailure",
+                "emailRecipients": "release.environment.owner;release.creator",
+                "skipArtifactsDownload": false,
+                "timeoutInMinutes": 0,
+                "enableAccessToken": false,
+                "publishDeploymentStatus": true,
+                "badgeEnabled": false,
+                "autoLinkWorkItems": false,
+                "pullRequestDeploymentEnabled": false
+            },
+            "demands": [],
+            "conditions": [
+                {
+                    "name": "ReleaseStarted",
+                    "conditionType": 1,
+                    "value": ""
+                }
+            ],
+            "executionPolicy": {
+                "concurrencyCount": 1,
+                "queueDepthCount": 0
+            },
+            "schedules": [],
+            "currentRelease": {
+                "id": 19,
+                "url": "https://vsrm.dev.azure.com/nicolas0771/3d685656-e5b6-4b55-99e1-50d10de97631/_apis/Release/releases/19",
+                "_links": {}
+            },
+            "retentionPolicy": {
+                "daysToKeep": 30,
+                "releasesToKeep": 3,
+                "retainBuild": true
+            },
+            "processParameters": {},
+            "properties": {
+                "BoardsEnvironmentType": {
+                    "$type": "System.String",
+                    "$value": "unmapped"
+                },
+                "LinkBoardsWorkItems": {
+                    "$type": "System.String",
+                    "$value": "False"
+                }
+            },
+            "preDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "postDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "environmentTriggers": [],
+            "badgeUrl": "https://vsrm.dev.azure.com/nicolas0771/_apis/public/Release/badge/3d685656-e5b6-4b55-99e1-50d10de97631/3/3"
+        }
+    ],
+    "artifacts": [
+        {
+            "sourceId": "3d685656-e5b6-4b55-99e1-50d10de97631:8957e7c8-0e8a-41d2-817a-4f87fcf3d817",
+            "type": "Git",
+            "alias": "_WVD Deployment",
+            "definitionReference": {
+                "branches": {
+                    "id": "master",
+                    "name": "master"
+                },
+                "checkoutNestedSubmodules": {
+                    "id": "True",
+                    "name": "Any nested submodules within"
+                },
+                "checkoutSubmodules": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionSpecific": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionType": {
+                    "id": "latestFromBranchType",
+                    "name": "Latest from the default branch"
+                },
+                "definition": {
+                    "id": "8957e7c8-0e8a-41d2-817a-4f87fcf3d817",
+                    "name": "AVD AK"
+                },
+                "fetchDepth": {
+                    "id": "",
+                    "name": ""
+                },
+                "gitLfsSupport": {
+                    "id": "",
+                    "name": ""
+                },
+                "project": {
+                    "id": "3d685656-e5b6-4b55-99e1-50d10de97631",
+                    "name": "AVD Advanced Kickstarter"
+                }
+            },
+            "isPrimary": true,
+            "isRetained": false
+        }
+    ],
+    "triggers": [],
+    "releaseNameFormat": "Release-$(rev:r)",
+    "tags": [],
+    "properties": {
+        "DefinitionCreationSource": {
+            "$type": "System.String",
+            "$value": "ReleaseImport"
+        },
+        "IntegrateBoardsWorkItems": {
+            "$type": "System.String",
+            "$value": "False"
+        },
+        "IntegrateJiraWorkItems": {
+            "$type": "System.String",
+            "$value": "false"
+        }
+    },
+    "id": 3,
+    "name": "Add Session Hosts",
+    "path": "\\",
+    "projectReference": null,
+    "url": "https://vsrm.dev.azure.com/nicolas0771/3d685656-e5b6-4b55-99e1-50d10de97631/_apis/Release/definitions/3",
+    "_links": {
+        "self": {
+            "href": "https://vsrm.dev.azure.com/nicolas0771/3d685656-e5b6-4b55-99e1-50d10de97631/_apis/Release/definitions/3"
+        },
+        "web": {
+            "href": "https://dev.azure.com/nicolas0771/3d685656-e5b6-4b55-99e1-50d10de97631/_release?definitionId=3"
+        }
+    }
+}
