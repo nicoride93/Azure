@@ -7,7 +7,9 @@ Is it possible to handle the deployment of AVD to another team? How can we worry
 This kickstarter will guide you thought an automation proces of how to deploy AVD using:
 
 1. [Azure DevOps](#DevOps)
-1. PowerPlatform
+    - Repos
+    - Release pipelines
+1. [PowerPlatform](#PowerPlatform)
     - PowerApps
     - PowerAutomate
 1. Azure Services
@@ -15,11 +17,13 @@ This kickstarter will guide you thought an automation proces of how to deploy AV
     - Azure Automation
     - Storage Accounts
 
+***
+
 ## DevOps
 
 On this framework, DevOps is the core software. It will be used to mantain the Repo and to orquestrate the deployment into Azure.
 
-### 1. Repos
+### Repos
 
 Repos are the handler of the ARM templates. The team will maintain the templates here and everytime a new deployment comes, the latest version of these temapltes will be used. 
 
@@ -47,7 +51,7 @@ The repo is structured in the following way
 
 ![DevOps Repo Levels](media/DevOps-Repo-levels.png)
 
-### 2. Release Pipeline
+### Release Pipeline
 
 Release pipelines are the reposable of deploying into Azure. Depending on the action, we have 2 pipelines
 
@@ -57,7 +61,7 @@ Release pipelines are the reposable of deploying into Azure. Depending on the ac
 Each pipeline has the same tasks inside, but the **parameters** that they need to run is different. 
 
 
-#### 2.1 Tasks
+#### Tasks
 ![DevOps Tasks](media/DevOps-Tasks.png)
 
 To deploy into Azure, the pipeline does 3 steps
@@ -66,7 +70,7 @@ To deploy into Azure, the pipeline does 3 steps
 1. Copy into a temp storage account. This step is needed since we are working with nested templates. 
 1. Deploy the ARM template with the provided parameters. 
 
-#### 2.2 Parameters
+#### Parameters
 
 On the "Deploy into Azure" task, the parameters template in the repo has some default settings, but what if we do want to add more flexibility into de deployment? If we want to add the Hostpool name for example without the need of changing everytime the parameters template.
 
@@ -78,3 +82,14 @@ These variables will be used on the deployment task to override the default para
 On the deployment task of DevOps, we can see the "Override template parameters" In here we will replace the defult parameters with some dyncamic content.
 
 ![DevOps Task Variables](media/DevOps-Task-Variables.png)
+
+***
+
+## PowerPlatform
+
+PowerPlatform can be used as a UI and also as the orquestrator behind all this solution. If PowerPlatform is not a viable solution for you, there is a workarround with Azure LogicApps that can be integrated with other UIs like Office365 Forms or any service that can trigger a REST call into LogicApps.
+
+### PowerApps
+
+PowerApps is used as a UI. Since is a Low-Code solution, the maintain effort is low and 
+
