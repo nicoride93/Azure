@@ -6,7 +6,7 @@ Is it possible to handle the deployment of AVD to another team? How can we worry
 
 This kickstarter will guide you thought an automation proces of how to deploy AVD using:
 
-1. Azure DevOps
+1. [Azure DevOps] (#DevOps)
 1. PowerPlatform
     - PowerApps
     - PowerAutomate
@@ -59,6 +59,7 @@ Each pipeline has the same tasks inside, but the **parameters** that they need t
 
 #### 2.1 Tasks
 ![DevOps Tasks](media/DevOps-Tasks.png)
+
 To deploy into Azure, the pipeline does 3 steps
 
 1. Fetch from Key Vault the "Join Domain Password".
