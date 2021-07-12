@@ -6,7 +6,7 @@ Is it possible to handle the deployment of AVD to another team? How can we worry
 
 This kickstarter will guide you thought an automation proces of how to deploy AVD using:
 
-1. [Azure DevOps] (#DevOps)
+1. [Azure DevOps](#DevOps)
 1. PowerPlatform
     - PowerApps
     - PowerAutomate
