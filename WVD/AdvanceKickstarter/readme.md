@@ -14,7 +14,7 @@ This kickstarter will guide you thought an automation proces of how to deploy AV
 1. [PowerPlatform](#PowerPlatform)
     - [PowerApps](#PowerApps)
     - [PowerAutomate](#PowerAutomate)
-1. [Azure Services](#Azure%20Services)
+1. [Azure Services](#Azure-Services)
     - [Key vault](#Key-Vault)
     - [Automation Accounts](#Automation-Accounts)
     - [Storage Accounts](#Storage-Accounts)
