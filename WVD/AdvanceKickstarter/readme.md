@@ -8,16 +8,16 @@ This kickstarter will guide you thought an automation proces of how to deploy AV
 
 1. [Azure DevOps](#DevOps)
     - [Repos](#Repos)
-    - [Release pipelines](#Release%20Pipeline)
+    - [Release pipelines](#Release-Pipeline)
         - [Tasks](#Tasks)
         - [Parameters](#Parameters)
 1. [PowerPlatform](#PowerPlatform)
     - [PowerApps](#PowerApps)
     - [PowerAutomate](#PowerAutomate)
 1. [Azure Services](#Azure%20Services)
-    - [Key vault](#Key%20Vault)
-    - [Automation Accounts](#Automation%20Accounts)
-    - [Storage Accounts](#Storage%20Accounts)
+    - [Key vault](#Key-Vault)
+    - [Automation Accounts](#Automation-Accounts)
+    - [Storage Accounts](#Storage-Accounts)
 
 ***
 
@@ -132,4 +132,4 @@ This script can be found in [here](/PsScripts/hostpoolManagement.ps1). This scri
 
 ### Storage Accounts
 
-The Storage Accounts are just a temp space to storage the ARM templates that are going to be needed by Azure when the nested template deployment is called. The storage account is used by DevOps on the [Release Pipeline](#Release%20Pipeline)
+The Storage Accounts are just a temp space to storage the ARM templates that are going to be needed by Azure when the nested template deployment is called. The storage account is used by DevOps on the [Release Pipeline](#Release-Pipeline)
