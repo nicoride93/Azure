@@ -126,7 +126,7 @@ In order to keep secrets on the deployment, Key Vault is use to store the Join D
 
 When whe depoloy a brand new hostpool, is the user that provides all the parameters. But what happens when we need to deploy to an existing hostpool? Can the user remember the hostpool token? Unless the user has an awesome memory, I don't think so. That's why Automation Accounts will do the job for us. 
 
-This script can be found in [here](/PsScripts/hostpoolManagement.ps1). This script will go an fetch the information from AVD service and return the information that is needed for the deployment. 
+This script can be found in [here](../PsScripts/hostpoolManagement.ps1). This script will go an fetch the information from AVD service and return the information that is needed for the deployment. 
 
 ![Azure Automation](media/Azure-Automation.png)
 
