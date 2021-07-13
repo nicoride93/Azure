@@ -7,15 +7,17 @@ Is it possible to handle the deployment of AVD to another team? How can we worry
 This kickstarter will guide you thought an automation proces of how to deploy AVD using:
 
 1. [Azure DevOps](#DevOps)
-    - Repos
-    - Release pipelines
+    - [Repos](#Repos)
+    - [Release pipelines](#Release%20Pipeline)
+        - [Tasks](#Tasks)
+        - [Parameters](#Parameters)
 1. [PowerPlatform](#PowerPlatform)
-    - PowerApps
-    - PowerAutomate
-1. Azure Services
-    - Key vault
-    - Azure Automation
-    - Storage Accounts
+    - [PowerApps](#PowerApps)
+    - [PowerAutomate](#PowerAutomate)
+1. [Azure Services](#Azure%20Services)
+    - [Key vault](#Key%20Vault)
+    - [Automation Accounts](#Automation%20Accounts)
+    - [Storage Accounts](#Storage%20Accounts)
 
 ***
 
@@ -91,5 +93,43 @@ PowerPlatform can be used as a UI and also as the orquestrator behind all this s
 
 ### PowerApps
 
-PowerApps is used as a UI. Since is a Low-Code solution, the maintain effort is low and 
+PowerApps is used as a UI. Since is a Low-Code solution, the maintain effort is low and the customization is quick. 
 
+#### PowerApps
+
+![PowerApps](media/PowerApps.png)
+
+PowerApps will be our UI for the automation in this framework. It will help answer questions like "Can I delegate a part of the deployment without compromise security and policies?"
+
+> If a new requirement or if a change in the UI is needed, can be done with **minimum effort**
+
+![PowerApps Inputs](media/PowerApps-Inputs.png)
+
+### PowerAutomate
+
+Behind the UI, a flow is running to get all the input from the PowerApp and build the logic for the deployment. Do we need to select a VM size according the domain the VM is joining? Do we need an specific VM prefix according to the image  we select? All of this can be achieve with flow and following the same principal of PowerApps.
+
+
+> If a new requirement or if a change in the UI is needed, can be done with **minimum effort**
+
+![PowerAutomate](media/PowerAutomate.png)
+
+***
+
+## Azure Services
+
+### Key Vault
+
+In order to keep secrets on the deployment, Key Vault is use to store the Join Domain Password and can be used for extra secrets that the deployments needs. 
+
+### Automation Accounts
+
+When whe depoloy a brand new hostpool, is the user that provides all the parameters. But what happens when we need to deploy to an existing hostpool? Can the user remember the hostpool token? Unless the user has an awesome memory, I don't think so. That's why Automation Accounts will do the job for us. 
+
+This script can be found in [here](/PsScripts/hostpoolManagement.ps1). This script will go an fetch the information from AVD service and return the information that is needed for the deployment. 
+
+![Azure Automation](media/Azure-Automation.png)
+
+### Storage Accounts
+
+The Storage Accounts are just a temp space to storage the ARM templates that are going to be needed by Azure when the nested template deployment is called. The storage account is used by DevOps on the [Release Pipeline](#Release%20Pipeline)
