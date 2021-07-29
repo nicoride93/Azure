@@ -53,6 +53,12 @@ if($upnToSearch -eq '') {
 }
 #If the UPN is provided, get the VM that is assigned to that user and show the information
 else {
+    $user=$getSessionHosts | Where-Object AssignedUser -eq $upnToSearch | Select AssignedUser,Name
     $user=$getSessionHosts | Where-Object AssignedUser -eq $upnToSearch | select AssignedUser,Name
-    $user
+    if($user -eq $null){
+        Write-Host("No VM with that user assigned")
+    }
+    else{
+        $user
+    }
 }
