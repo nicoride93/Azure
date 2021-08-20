@@ -62,7 +62,7 @@ foreach ($vm in $vmsToDelete){
         $hostpoolName = $hostpoolInfo.Id.Split('/')[8]
         $hostpoolRg = $hostpoolInfo.Id.Split('/')[4]
         $vmFqdn = $hostpoolInfo.Id.Split('/')[10]
-        Write-Output "deleting $vmName from hostpool $hostpoolName and resource group $hostpoolRg"
+        Write-Output "Deleting $vmName from hostpool $hostpoolName and resource group $hostpoolRg"
         Remove-AzWvdSessionHost -HostPoolName $hostpoolName -Name $vmFqdn -ResourceGroupName $hostpoolRg | Out-Null
 
     }
