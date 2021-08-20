@@ -11,6 +11,7 @@
     Then will compare the objects, using the VM in the subscription as the main object and the session host object as a difference object. The result will be:
         VMs that are in the subcription but are not part of AVD as session hosts. '<='
         VMs that are in AVD as session hosts but the resources of that session hosts does not exist in Azure. '=>'
+    The script will prompt you for confirmation to proceed with the deletion process
     At the end, will loop the object of differences and delete according to the status:
         If is in AVD, will remove the session host from AVD
         If the resource exits, will delete it and all the child resources (disk and network card)
@@ -27,9 +28,9 @@ Connect-AzAccount
 
 #Variables
 #Subcription ID on where the script will run into
-$subscriptionid="715a0462-0f46-49b1-98fc-4167715cb0b9"
+$subscriptionid="XXX-XXX-XXX"
 #Array of resource groups that will be excluded.
-$rgNotToCompare=@("RG_WVD_MGT_DWS")
+$rgNotToCompare=@("XXX-XXX")
 
 #Get the information of all the session hosts inside all the hostpools and build an object
 $hps = Get-AzWvdHostPool -SubscriptionId $subscriptionid
@@ -47,10 +48,25 @@ $vms = Get-AzVM | Where-Object {$_.ResourceGroupName -notin $rgNotToCompare}
 $vmsToDelete=Compare-Object -ReferenceObject $vms.Id -DifferenceObject $getSessionHosts.ResourceId
 
 #Print the ammount of processes to do
-$vmsDeleted = ($vmsToDelete | Where-Object SideIndicator -EQ "=>" | Measure-Object -Property SideIndicator ).Count
-$vmsWithoutHostpool = ($vmsToDelete | Where-Object SideIndicator -EQ "<=" | Measure-Object -Property SideIndicator).Count 
-Write-Output "Vms deleted but are in a hostpool: $vmsDeleted" 
-Write-Output "Vms without a hostpool assigned: $vmsWithoutHostpool" 
+$vmsDeleted = ($vmsToDelete | Where-Object {$_.SideIndicator -EQ "=>"}| ForEach-Object {$_.InputObject.Split('/')[8]})
+$vmsWithoutHostpool = ($vmsToDelete | Where-Object {$_.SideIndicator -EQ "<="} | ForEach-Object {$_.InputObject.Split('/')[8]})
+
+Write-Output "----------------------------------"
+Write-Output "Vms deleted but are in a hostpool: " 
+$vmsDeleted
+Write-Output "----------------------------------"
+Write-Output "Vms without a hostpool assigned: " 
+$vmsWithoutHostpool
+Write-Output "----------------------------------"
+
+#Prompt for confirmation
+$answer = Read-Host "Do you want to continue? (Yes/No)"
+while("yes","no" -notcontains $answer){
+    $answer = Read-Host "Yes or No"
+}
+
+#Breaking if the answer is no
+If($answer -eq "no"){Break;}
 
 #Foreach VM to be deleted, check if we need to remove it from AVD or remove the resources
 foreach ($vm in $vmsToDelete){
@@ -62,9 +78,8 @@ foreach ($vm in $vmsToDelete){
         $hostpoolName = $hostpoolInfo.Id.Split('/')[8]
         $hostpoolRg = $hostpoolInfo.Id.Split('/')[4]
         $vmFqdn = $hostpoolInfo.Id.Split('/')[10]
-        Write-Output "Deleting $vmName from hostpool $hostpoolName and resource group $hostpoolRg"
+        Write-Output "deleting $vmName from hostpool $hostpoolName and resource group $hostpoolRg"
         Remove-AzWvdSessionHost -HostPoolName $hostpoolName -Name $vmFqdn -ResourceGroupName $hostpoolRg | Out-Null
-
     }
     else{
         #Delete the VM resources, since is not attached to any AVD hostpool
